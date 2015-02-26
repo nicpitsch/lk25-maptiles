@@ -43,8 +43,8 @@ Map data for use with kufi.if-control, includes a simple local tileserver
 __Note:__ This is for future considerations and background knowledge.
 
 __Determining the ideal zoom range can be tricky__ and varies from source to source. 11 to 16 seems a decent starting point, and Maptiler will also set the maximum to whatever your source file can reasonably support, because zooming in further than the native resolution of the source will look bad.
-Output your map to this repo's folder and check the combined size of the numbered folders you just generated (in this case, you'll get `11, 12, 13, 14, 15 and 16`, all containing map tiles). You're aiming for less than 30mb per layer, if possible. If a client choses to offline all map layers, that would be nearly 100mb stored on the device, which should be fine. Be aware that each zoom layer will usually __triple__ the size of the previous one. If you have a 30mb tile layer, adding a single zoom layer will increase the size to about 80mb, adding one more will be about 240mb. F
 
+Output your map to this repo's root folder and check the combined size of the numbered folders you just generated (in this case, you'll get `11, 12, 13, 14, 15 and 16`, all containing map tiles). You're aiming for less than 30mb per layer, if possible. If a client choses to offline all map layers, that would be nearly 100mb stored on the device, which should be fine. Be aware that each zoom layer will usually be __triple__ the size of the previous one. If you have a 30mb tile set, adding a single zoom layer will increase the size to about 80mb, adding one more will be about 240mb. Since there are three maps in the app, this would probably not be such a good idea.
 
 ## Local Usage
 
